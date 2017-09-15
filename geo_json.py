@@ -4,14 +4,14 @@ import json
 
 from pprint import pprint
 
-''' read geojson file, parse a nd print'''
+''' read geojson file, parse and print'''
 try:
     with open('Scenic_Views.geojson') as data_file:
 
         data = json.load(data_file)
         # check data type ' dict '
         print type(data)
-        
+
         # print all
         #data['features'][0]['geometry']
         #j_data = json.dumps(data)
