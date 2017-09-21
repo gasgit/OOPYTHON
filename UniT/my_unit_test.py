@@ -13,16 +13,22 @@ def whatAmI(val):
 
 class MyFirstTest(unittest.TestCase):
     ''' test func sq pass'''
-    def testPass(self):
+    def test_pass(self):
         self.assertEqual(square(2),4)
     ''' test func sq fail'''
-    def testFail(self):
+    def test_fail(self):
         self.assertEqual(square(3),10)
     ''' test param is alpha'''
-    def testValString(self):
+    def test_val_string(self):
         self.assertTrue(whatAmI('iamstring').isalpha())
+    ''' test is upper'''
+    def test_upper(self):
+        self.assertTrue(whatAmI('HELLO').isupper())
+    ''' test is ! upper'''
+    def test_not_upper(self):
+        self.assertTrue(whatAmI('hello').isupper())
     ''' test param digit''' 
-    def testValNum(self):
+    def test_val_num(self):
         self.assertTrue(whatAmI('2').isdigit())
 
 
